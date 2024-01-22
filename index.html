@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+</head>
+
+<body>
+
+    <h1>Page 1</h1>
+
+    <form id="testForm" onsubmit="navigateToPage2(); return false;">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="admin">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="password123">
+
+        <input type="submit" value="Next Page">
+    </form>
+
+    <script>
+        function navigateToPage2() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Simulate data interception and modification
+            var modifiedUsername = username + "-modified";
+            var modifiedPassword = "modified-" + password;
+
+            // Navigate to Page 2 with the modified data
+            window.location.href = 'page2.html?username=' + modifiedUsername + '&password=' + modifiedPassword;
+        }
+    </script>
+
+</body>
+
+</html>

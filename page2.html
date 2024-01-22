@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+
+<body>
+
+    <h1>Page 2</h1>
+
+    <script>
+        // Extract parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        const password = urlParams.get('password');
+
+        // Display the extracted data
+        document.write('<p>Modified Username: ' + username + '</p>');
+        document.write('<p>Modified Password: ' + password + '</p>');
+    </script>
+
+</body>
+
+</html>
